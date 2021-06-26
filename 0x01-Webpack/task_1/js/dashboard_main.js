@@ -1,3 +1,4 @@
+const _ = require('lodash');
 $.when( $.ready ).then(function() {
   var count = 0;
   function updateCounter() {
