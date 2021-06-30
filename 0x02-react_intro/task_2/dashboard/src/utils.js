@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const getFullYear = () => {
     var currentTime = new Date()
 
@@ -10,3 +12,9 @@ export const getFooterCopy = (isIndex) => {
     }
     return 'Holberton School main dashboard';
 }
+
+export const getLatestNotification = (a) => {
+    return <li style={a}><strong>Urgent requirement</strong> - complete by EOD</li>
+}
+
+export default getLatestNotification;
