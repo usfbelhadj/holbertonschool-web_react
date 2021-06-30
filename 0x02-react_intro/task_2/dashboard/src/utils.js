@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const getFullYear = () => {
     var currentTime = new Date()
 
@@ -14,7 +12,7 @@ export const getFooterCopy = (isIndex) => {
 }
 
 export const getLatestNotification = (a) => {
-    return <li style={a}><strong>Urgent requirement</strong> - complete by EOD</li>
+    return '<strong>Urgent requirement</strong> - complete by EOD'
 }
 
 export default getLatestNotification;
