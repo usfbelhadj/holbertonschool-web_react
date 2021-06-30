@@ -1,7 +1,7 @@
 import React from 'react';
 import './Notifications.css';
 import close_icon from './close-icon.png';
-import {getLatestNotification} from './utils.js';
+import {getLatestNotification} from './utils';
 
 export const Notifications = () => {
     const handelClose = () => {
@@ -33,7 +33,9 @@ export const Notifications = () => {
         <ul>
         <li style = {defaultPriority()}>New course available</li>
         <li style = {urgentPriority()}>New resume available</li>
-            {getLatestNotification(urgentPriority())}
+        <li style = {urgentPriority()}> <div
+            dangerouslySetInnerHTML={{ __html: `${getLatestNotification()}` }}
+          ></div></li>
         </ul>
     </div>
 }
