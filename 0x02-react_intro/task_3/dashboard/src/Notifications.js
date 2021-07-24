@@ -29,8 +29,8 @@ export const Notifications = () => {
         };
     return <div className="Notifications">
         <button aria-label='close' style={buttonStyle} onClick={handelClose}><img src={close_icon} alt="" style={{ width: '12px', height: '12px' }} /></button>
-        <p>Here is the list of notifications</p>
-        <ul>
+        <p className="text">Here is the list of notifications</p>
+        <ul className="list">
         <li style = {defaultPriority()}>New course available</li>
         <li style = {urgentPriority()}>New resume available</li>
         <li style = {urgentPriority()}> <div
