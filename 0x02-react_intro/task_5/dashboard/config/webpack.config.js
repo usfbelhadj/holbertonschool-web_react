@@ -7,20 +7,46 @@ module.exports = {
     path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.js',
   },
-  module:{
-      rules:[
-          {
-        test: /\.js|\.jsx$/,
-        use: {
-            loader: 'babel-loader',
-            options: {
-                presets: ["@babel/preset-env", "@babel/react"]
+  module: {
+    rules: [
+        {
+            test: /\.css$/, use: ['style-loader', 'css-loader']
+        },
+        {
+            test: /\.(gif|png|jpe?g|svg)$/i,
+            use: [
+                'file-loader',
+                {
+                    loader: 'image-webpack-loader',
+                    options: {
+                        bypassOnDebug: true, // webpack@1.x
+                        disable: true, // webpack@2.x and newer
+                    },
+                },
+            ],
+        },
+        {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: {
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/preset-env', '@babel/react']
+                }
             }
         },
-
-        exclude: /node_modules/
-    }]
-    },
+        {
+            test: /\.jsx$/,
+            exclude: /node_modules/,
+            use: {
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/preset-env', '@babel/react']
+                }
+            }
+        },
+    ],
+},
     devtool: 'inline-source-map',
     devServer: {
 		contentBase: path.resolve('dist'),
