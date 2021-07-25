@@ -4,7 +4,7 @@ module.exports = {
   mode: 'development',
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.js',
   },
   module:{
@@ -23,7 +23,14 @@ module.exports = {
     },
     devtool: 'inline-source-map',
     devServer: {
-        hot: true,
-        port: 4001,
-    },
+		contentBase: path.resolve('dist'),
+		compress: true,
+		port: 8564,
+		hot: true,
+		writeToDisk: true,
+		historyApiFallback: true,
+
+		publicPath: './',
+		
+	},
 };
