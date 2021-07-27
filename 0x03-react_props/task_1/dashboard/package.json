@@ -3,48 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://usfbelhadj.github.io/holbertonschool-web_react/",
-  "jest": {
-    "verbose": true,
-    "transform": {
-      "^.+\\.js$": "babel-jest"
-    },
-    "globals": {
-      "NODE_ENV": "test"
-    },
-    "moduleFileExtensions": [
-      "js",
-      "jsx"
-    ],
-    "moduleDirectories": [
-      "node_modules",
-      "src/frontend",
-      "src/shared"
-    ]
-  },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "@types/enzyme-adapter-react-16": "^1.0.6",
-    "browserslist": "^2.11.3",
-    "enzyme": "^3.11.0",
-    "gh-pages": "^3.2.3",
-    "jest": "^20.0.4",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "^1.1.5",
-    "web-vitals": "^1.1.2",
-    "webpack": "^5.44.0"
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject",
+    "test-watch": "jest --watch",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "test-watch": "jest --watch"
+    "deploy": "gh-pages -d build"
   },
+
+
+
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -55,7 +34,6 @@
     "production": [
       ">0.2%",
       "not dead",
-      "not ie <= 11",
       "not op_mini all"
     ],
     "development": [
@@ -64,14 +42,13 @@
       "last 1 safari version"
     ]
   },
-  "type": "module",
   "devDependencies": {
-    "@babel/core": "^7.14.8",
-    "@babel/node": "^7.14.7",
-    "@babel/preset-env": "^7.14.8",
-    "bs-enzyme": "^0.6.1",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "@jest/globals": "^26.6.2",
+    "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
-    "enzyme-to-json": "^3.6.2",
-    "react-hot-loader": "^4.13.0"
+    "jest": "^26.6.0",
+    "jest-css-modules-transform": "^4.3.0"
   }
 }

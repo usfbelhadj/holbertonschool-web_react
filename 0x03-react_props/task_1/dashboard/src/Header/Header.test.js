@@ -12,5 +12,5 @@ it('App render class App-header', () => {
 
   it("render img", () => {
       const wrapper = shallow(<Header/>)
-      expect(wrapper.find('img').getElement(0).props.src).toEqual("logo.jpg")
+      expect(wrapper.find('div.App-header img')).toHaveLength(1);
   })
