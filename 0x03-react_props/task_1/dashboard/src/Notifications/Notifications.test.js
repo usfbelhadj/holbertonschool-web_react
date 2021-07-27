@@ -6,7 +6,6 @@ configure({adapter: new Adapter()});
 
 
 
-describe(< Notifications />, () => {
     it("Notifications renders without crashing",() => {
         const wrapper = shallow(< Notifications/>)
         expect(wrapper.exists()).toEqual(true)
@@ -27,5 +26,3 @@ describe(< Notifications />, () => {
             true
           );
     })
-
-})
