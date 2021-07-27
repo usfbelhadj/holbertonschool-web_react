@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import App from "./App";
-configure({adapter: new Adapter()});
+Enzyme.configure({adapter: new Adapter()});
 
 describe("<App />", () => {
   it('App render with no crash', () => {

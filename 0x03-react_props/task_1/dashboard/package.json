@@ -3,6 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://usfbelhadj.github.io/holbertonschool-web_react/",
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "globals": {
+      "NODE_ENV": "test"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src/frontend",
+      "src/shared"
+    ]
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -18,11 +36,10 @@
     "web-vitals": "^1.1.2",
     "webpack": "^5.44.0"
   },
-  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -47,8 +64,11 @@
       "last 1 safari version"
     ]
   },
+  "type": "module",
   "devDependencies": {
-    "babel-preset-stage-2": "^6.24.1",
+    "@babel/core": "^7.14.8",
+    "@babel/node": "^7.14.7",
+    "@babel/preset-env": "^7.14.8",
     "bs-enzyme": "^0.6.1",
     "enzyme-adapter-react-16": "^1.15.6",
     "enzyme-to-json": "^3.6.2",
