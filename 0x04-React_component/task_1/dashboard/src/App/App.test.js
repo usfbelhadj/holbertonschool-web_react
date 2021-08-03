@@ -21,4 +21,9 @@ describe("<App />", () => {
     const wrapper = shallow(< App isLoggedIn/>);
     expect(wrapper.find('Login').exists()).toEqual(false)
   })
+  it('check handleKeyPress with keyup', () => {
+
+    const alert = jest.spyOn(global, 'alert');
+    expect(alert);
+  })
 });
