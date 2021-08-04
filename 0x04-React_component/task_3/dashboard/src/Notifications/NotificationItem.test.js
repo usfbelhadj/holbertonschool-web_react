@@ -12,7 +12,7 @@ it(" rendering of the component", () => {
 
 it("renders the correct Props ", () => {
     const wrapper = shallow(<NotificationItem type="default" value="test"/>)
-    expect(wrapper.props()).toEqual({"children": "test", "data-priority": "default"})
+    expect(wrapper.props()).toContain('{"children": "test", "data-priority": "default", "onClick": [Function onClick]}')
 })
 
 it("renders the correct html", () => {
