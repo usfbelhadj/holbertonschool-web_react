@@ -6,7 +6,7 @@ import Login from '../Login/Login';
 import Notifications from '../Notifications/Notifications';
 import CourseList from '../CourseList/CourseList.js'
 import PropTypes from 'prop-types';
-import BodySection from '../BodySection/BodySection.js'
+import BodySectionWithMarginBottom from '../BodySection/BodySectionWithMarginBottom.js'
 
 
 const listCourses = [
@@ -49,9 +49,9 @@ class App extends React.Component {
       {isLoggedIn && <CourseList {...{listCourses}}/>}
       {!isLoggedIn && <Login/>}
       <Footer/>
-      <BodySection title="test">
-        <p>test</p>
-      </BodySection>
+      < BodySectionWithMarginBottom title="test">
+  <p>test</p>
+      </BodySectionWithMarginBottom>
     </React.Fragment>
   );
 }
