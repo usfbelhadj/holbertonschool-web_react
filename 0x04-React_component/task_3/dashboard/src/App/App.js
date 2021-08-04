@@ -7,6 +7,7 @@ import Notifications from '../Notifications/Notifications';
 import CourseList from '../CourseList/CourseList.js'
 import PropTypes from 'prop-types';
 import BodySectionWithMarginBottom from '../BodySection/BodySectionWithMarginBottom.js'
+import BodySection from '../BodySection/BodySection.js'
 
 
 const listCourses = [
@@ -46,12 +47,17 @@ class App extends React.Component {
     <Notifications {...{listNotifications}}/>
     </div>
         <Header/>
+      < BodySectionWithMarginBottom title="Course list">
       {isLoggedIn && <CourseList {...{listCourses}}/>}
-      {!isLoggedIn && <Login/>}
-      <Footer/>
-      < BodySectionWithMarginBottom title="test">
-  <p>test</p>
       </BodySectionWithMarginBottom>
+      < BodySectionWithMarginBottom title="Log in to continue">
+      {!isLoggedIn && <Login/>}
+      </BodySectionWithMarginBottom>
+      <BodySection title='News from the School'>
+          <p>Log in the School addEventListener </p>
+        </BodySection> 
+      <Footer/>
+
     </React.Fragment>
   );
 }
