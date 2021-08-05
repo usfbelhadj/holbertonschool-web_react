@@ -69,7 +69,7 @@ class Notifications extends React.Component {
 }
 Notifications.propTypes = {
     displayDrawer: PropTypes.bool,
-    listNotifications : PropTypes.array
+    listNotifications : PropTypes.arrayOf(NotificationItemShape)
 }
 
 Notifications.defaultProps = {
