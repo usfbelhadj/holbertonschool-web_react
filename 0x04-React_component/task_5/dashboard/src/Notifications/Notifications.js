@@ -4,6 +4,7 @@ import close_icon from './close-icon.png';
 //import {getLatestNotification} from '../utils';
 import NotificationItem from './NotificationItem.js';
 import PropTypes from 'prop-types';
+import NotificationItemShape from './NotificationItemShape';
 
 
 
